@@ -3,7 +3,7 @@ if ("serviceWorker" in navigator) {
   // 서비스 워커 script 등록하기
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("./sw_cached__pages.js")
+      .register("./sw_cached_site.js")
       .then((reg) => {
         console.log("service worker: registered");
       })
