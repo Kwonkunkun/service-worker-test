@@ -36,3 +36,13 @@ self.addEventListener("activate", (e) => {
     })
   );
 });
+
+//fetch event
+self.addEventListener("fetch", (e) => {
+  console.log("Service worker: Fetching");
+  e.respondWith(
+    fetch(e.request).catch(() => {
+      caches.match(e.request);
+    })
+  );
+});
