@@ -46,3 +46,5 @@ self.addEventListener("fetch", (e) => {
     })
   );
 });
+
+console.log(self);
